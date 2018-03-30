@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Hello WebSocket</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+
+	<h1>Hello Java API for WebSocket 1.1</h1>
+	<h3>JSR 356</h3>
+	<p>A WebSocket is a bi-directional and full-duplex communication
+		channel over a single TCP connection.</p>
+	<p>Utilizzare le WebSocket API consente di interagire tra client e
+		server senza la necessità di ricorrere a continue chiamate AJAX o
+		altri meccanismi simili, bensì mantenendo una canale costantemente
+		aperto che consenta lo scambio bilaterale di messaggi.</p>
+	<p>Il supporto alle WebSocket API, offerto oggi dai maggiori
+		browser, rappresenta una svolta nell’ambito delle interazioni tra
+		client-side e server-side delle applicazioni web. Mentre prima era
+		inevitabilmente necessario ricorrere alle chiamate AJAX, implementando
+		meccanismi come il polling per consentire lo scambio di informazioni
+		tra le due parti, con le WebSocket è possibile aprire un canale di
+		comunicazione bilaterale costantemente attivo. Ciò significa non solo
+		che è possibile implementare il polling senza ricorrere ad AJAX, ma
+		anche che meccanismi molto più efficaci ed apparentemente complessi
+		(quali le notifiche push o la messaggistica istantanea) sono ora
+		realizzabili con estrema facilità.</p>
+	<p>L’URI passato come argomento del costruttore sarà punterà al
+		nostro server (nel nostro caso identificato da echo.websocket.org). Le
+		prime lettere dell’URI consentono di specificare il livello di
+		sicurezza della connessione: possiamo utilizzare ws://, ottenendo una
+		comunicazione non cifrata ma meno onerosa e più rapida, oppure wss://,
+		in modo da sfruttare una connessione sicura, cifrata con TLS/SSL.</p>
+
+
+	<div>
+		<input type="text" id="messageinput" />
+	</div>
+	<div>
+		<button type="button" onclick="openSocket();">Open</button>
+		<button type="button" onclick="send();">Send</button>
+		<button type="button" onclick="closeSocket();">Close</button>
+	</div>
+
+	<!-- Server responses get written here -->
+	<div id="messages"></div>
+
+
+	<!-- Script to utilise the WebSocket -->
+	<script type="text/javascript">
+		var webSocket;
+		var messages = document.getElementById("messages");
+
+		function openSocket() {
+			// Ensures only one connection is open at a time
+			if (webSocket !== undefined && webSocket.readyState !== WebSocket.CLOSED) {
+				writeResponse("WebSocket is already opened.");
+				return;
+			}
+			// Create a new instance of the websocket
+			webSocket = new WebSocket("ws://150.145.114.105/demowebsocket/echo");
+			/**
+			 * Binds functions to the listeners for the websocket.
+			 */
+			webSocket.onopen = function(event) {
+				// For reasons I can't determine, onopen gets called twice
+				// and the first time event.data is undefined.
+				// Leave a comment if you know the answer.
+				if (event.data === undefined)
+					return;
+				writeResponse(event.data);
+			};
+
+			webSocket.onmessage = function(event) {
+				writeResponse(event.data);
+			};
+
+			webSocket.onclose = function(event) {
+				writeResponse("Connection closed");
+			};
+		}
+
+		/**
+		 * Sends the value of the text input to the server
+		 */
+		function send() {
+			var text = document.getElementById("messageinput").value;
+			webSocket.send(text);
+		}
+
+		function closeSocket() {
+			webSocket.close();
+		}
+
+		function writeResponse(text) {
+			messages.innerHTML += "<br/>" + text;
+		}
+	</script>
+
+</body>
+
+</html>

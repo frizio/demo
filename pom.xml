@@ -96,6 +96,7 @@
 	<modules>
 		<module>demoservlet</module>
 		<module>demolog4j</module>
+		<module>demowebsocket</module>
 	</modules>
 
 </project>
