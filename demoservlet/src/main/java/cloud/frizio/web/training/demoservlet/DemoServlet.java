@@ -14,7 +14,7 @@ public class DemoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	private static final Logger LOGGER = Logger.getLogger(DemoServlet.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(DemoServletTest.class.getName());
 	
 	// @Inject private transient Logger LOGGER;
 
