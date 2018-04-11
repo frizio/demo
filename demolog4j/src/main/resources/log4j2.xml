@@ -2,7 +2,7 @@
 
 <configuration status="WARN">
   	<Properties>
-		<Property name="logFilename">logs/app.log</Property>
+		<Property name="logFilename">/opt/wildfly/standalone/log/webapp.log</Property>
 	</Properties>
   	
   	<appenders>
