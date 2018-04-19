@@ -46,6 +46,10 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		
+		<version.info.reports.plugin>2.9</version.info.reports.plugin>
+		<version.war.plugin>2.6</version.war.plugin>
+		<version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
 	</properties>
 
 	<dependencies>
@@ -66,13 +70,13 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.9</version>
+				<version>${version.info.reports.plugin}</version>
 			</plugin>
 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>2.6</version>
+				<version>${version.war.plugin}</version>
 				<configuration>
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
@@ -81,7 +85,7 @@
 			<plugin>
 				<groupId>org.wildfly.plugins</groupId>
 				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>1.0.2.Final</version>
+				<version>${version.wildfly.maven.plugin}</version>
 				<configuration>
 					<path>/${project.artifactId}</path>
 					<hostname>${wildfly-hostname}</hostname>
@@ -97,6 +101,7 @@
 		<module>demoservlet</module>
 		<module>demolog4j</module>
 		<module>demowebsocket</module>
+		<module>demopicketlink-parent</module>
 	</modules>
 
 </project>
