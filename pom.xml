@@ -102,6 +102,7 @@
 		<module>demolog4j</module>
 		<module>demowebsocket</module>
 		<module>demopicketlink-parent</module>
+		<module>demoprimefaces</module>
 	</modules>
 
 </project>
