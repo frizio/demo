@@ -103,6 +103,7 @@
 		<module>demowebsocket</module>
 		<module>demopicketlink-parent</module>
 		<module>demoprimefaces</module>
+		<module>demojsf</module>
 	</modules>
 
 </project>
