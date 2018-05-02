@@ -8,24 +8,29 @@ import javax.faces.event.PhaseListener;
 
 public class LifeCycleListener implements PhaseListener {
 
+	private static final long serialVersionUID = 1L;
+	
 	private Logger LOGGER = Logger.getLogger(LifeCycleListener.class.getName());
 	
-	private static final long serialVersionUID = 1L;
-
+	
 	@Override
 	public void afterPhase(PhaseEvent event) {
-		LOGGER.info("START PHASE " + event.getPhaseId());
+		LOGGER.info("afterPhase method: END PHASE " + event.getPhaseId() + "\n");
 	}
 
 	@Override
 	public void beforePhase(PhaseEvent event) {
-		LOGGER.info("END PHASE " + event.getPhaseId());
+		LOGGER.info("beforePhase method: START PHASE " + event.getPhaseId());
+		if (event.getPhaseId() == PhaseId.RESTORE_VIEW) {
+			LOGGER.info("Siamo nella fase di RESTORE_VIEW");
+		} else if (event.getPhaseId() == PhaseId.RENDER_RESPONSE) {
+			LOGGER.info("Siamo nella fase di RENDER_RESPONSE");
+		}
 	}
 
 	@Override
 	public PhaseId getPhaseId() {
 		return PhaseId.ANY_PHASE;
-		
 	}
 
 }

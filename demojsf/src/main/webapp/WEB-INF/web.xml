@@ -27,7 +27,7 @@
 		<location>/public/error.xhtml</location>
 	</error-page>
 
-	<!-- Informazioni non strettamente necessarie -->
+	<!-- Informazioni non strettamente necessarie 
 	<context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
         <param-value>Development</param-value>
@@ -58,5 +58,6 @@
 		<servlet-name>Faces Servlet</servlet-name>
 		<url-pattern>*.jsf</url-pattern>
 	</servlet-mapping>
+	-->
 		
 </web-app>
