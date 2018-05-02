@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Index XHTML</title>
+</h:head> 
+
+<body> 
+	<h1>Esempio 1</h1>
+	<h2>Libri utente</h2>
+	
+	<h:form id="myForm">
+		<h:outputLabel for="title" value="Titolo" />
+		<h:inputText id="title" value="#{pageController.title}" />
+		<br/>
+		<h:outputLabel for="pages" value="Pagine" />
+		<h:inputText id="pages" value="#{pageController.pages}" 
+					 converterMessage="Inserisci un valore numerico nel campo pagine" />
+		<h:message for="pages"/> 
+		<br/>
+		<h:commandButton action="#{pageController.insertBook()}" value="Aggiungi" />
+		
+		<ul>
+			<ui:repeat var="book" value="#{userData.books}">
+				<li>#{book.title} #{book.pages}</li>
+			</ui:repeat>
+		</ul>
+		
+	</h:form>
+	
+	<h:messages />
+	
+</body> 
+
+</html>

@@ -17,7 +17,7 @@
 	<h:outputLabel value="Path del contesto di richiesta: #{request.getContextPath()}" />
 	<br />
 	<p>#{demo.counter}</p>
-	<h:outputLabel value="#{demo.counter}" />
+	<h:outputLabel value="Questo testo è dentro il tag label #{demo.counter}" />
 
 	<ul>
 		<ui:repeat var="itemm" value="#{demo.list}" varStatus="loop">
@@ -28,6 +28,10 @@
 	<ui:repeat var="item" value="#{demo.list}">
 		<p>#{item}</p>
 	</ui:repeat>
+	
+	<h:panelGroup class="panel" layout="block" rendered="true">
+		<p>Questo è un panelGroup (span o div)</p>
+	</h:panelGroup>
 	
 </body> 
 

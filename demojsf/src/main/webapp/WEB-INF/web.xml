@@ -6,7 +6,7 @@
                 			 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
 
 	<session-config>
-		<session-timeout>1</session-timeout>
+		<session-timeout>2</session-timeout>
 	</session-config>
 
 	<display-name>Demooooooooo JSF</display-name>
@@ -25,6 +25,11 @@
 	<error-page>
 		<error-code>500</error-code>
 		<location>/public/error.xhtml</location>
+	</error-page>
+
+	<error-page>
+	    <exception-type>javax.faces.application.ViewExpiredException</exception-type>
+	    <location>/public/expired.xhtml</location>
 	</error-page>
 
 	<!-- Informazioni non strettamente necessarie 

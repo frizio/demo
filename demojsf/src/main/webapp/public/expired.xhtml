@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>Session expired</title>
+	<meta http-equiv="refresh" content="5;url=#{request.contextPath}" />
+</h:head> 
+
+<body> 
+	<h1>Session expired!!!</h1>
+	<h2>javax.faces.application.ViewExpiredException</h2>
+	<h3>ViewExpiredException. Session has been invalidated.</h3>
+	<h3>You will be redirected to home page</h3>
+    <p><a href="#{request.contextPath}">Click here if you're impatient</a>.</p>
+</body> 
+
+</html>
