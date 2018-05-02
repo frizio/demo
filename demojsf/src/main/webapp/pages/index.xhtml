@@ -13,21 +13,21 @@
 <body> 
 	<h3>pages/index.XHTML</h3>
 	<h1>Hello Java Server Faces</h1>
-	<p>#{demo.counter}</p>
 	
 	<h:outputLabel value="Path del contesto di richiesta: #{request.getContextPath()}" />
 	<br />
+	<p>#{demo.counter}</p>
 	<h:outputLabel value="#{demo.counter}" />
-	
-	<ui:repeat var="item" value="#{demo.list}">
-		<p>#{item}</p>
-	</ui:repeat>
-	
+
 	<ul>
 		<ui:repeat var="itemm" value="#{demo.list}" varStatus="loop">
 			<li>#{loop.index} --> #{itemm}</li>
 		</ui:repeat>
 	</ul>
+	
+	<ui:repeat var="item" value="#{demo.list}">
+		<p>#{item}</p>
+	</ui:repeat>
 	
 </body> 
 

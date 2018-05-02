@@ -7,4 +7,8 @@
 	
 	<application />
 	
+	<lifecycle>
+	    <phase-listener>cloud.frizio.demo.web.training.listener.LifeCycleListener</phase-listener>
+	</lifecycle>
+	
 </faces-config>
