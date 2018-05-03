@@ -21,7 +21,7 @@ public class PageController implements Serializable {
 	private String title;
 	private int pages;
 	
-	
+
 	public String getTitle() {
 		return title;
 	}
