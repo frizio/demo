@@ -45,6 +45,10 @@ public class PageController implements Serializable {
 	}
 	
 	
+	public String goToPage() {
+		return "/pages/index.xhtml?faces-redirect=true";
+	}
+	
 	
 
 }

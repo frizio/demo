@@ -23,13 +23,29 @@
 					 converterMessage="Inserisci un valore numerico nel campo pagine" />
 		<h:message for="pages"/> 
 		<br/>
-		<h:commandButton action="#{pageController.insertBook()}" value="Aggiungi" />
+		<h:commandButton id="btn1" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata normale" />
+		<h:commandButton id="btn2" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata Ajax" >
+			<f:ajax execute="@form" render="@form" />
+		</h:commandButton>
+		<h:commandButton id="btn3" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata Ajax selettiva" >
+			<f:ajax execute="title pages" render="bookslist" />
+		</h:commandButton>
 		
-		<ul>
-			<ui:repeat var="book" value="#{userData.books}">
-				<li>#{book.title} #{book.pages}</li>
-			</ui:repeat>
-		</ul>
+		<h:panelGroup id="bookslist">
+			<ul>
+				<ui:repeat var="book" value="#{userData.books}">
+					<li>#{book.title} #{book.pages}</li>
+				</ui:repeat>
+			</ul>
+		</h:panelGroup>
+		<br/>
+		
+		<h:commandLink action="index.html?faces-redirect=true" value="Home page" />
+		<br/>
+		<h:commandLink action="index.html" value="Go to Home page with Navigation case" />
+		<br/>
+		<h:commandLink action="#{pageController.goToPage()}" value="Go to Home page" />
+		<br/>
 		
 	</h:form>
 	
