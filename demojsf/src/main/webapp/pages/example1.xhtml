@@ -16,18 +16,18 @@
 	
 	<h:form id="myForm">
 		<h:outputLabel for="title" value="Titolo" />
-		<h:inputText id="title" value="#{pageController.title}" />
+		<h:inputText id="title" value="#{example1Bean.title}" />
 		<br/>
 		<h:outputLabel for="pages" value="Pagine" />
-		<h:inputText id="pages" value="#{pageController.pages}" 
+		<h:inputText id="pages" value="#{example1Bean.pages}" 
 					 converterMessage="Inserisci un valore numerico nel campo pagine" />
 		<h:message for="pages"/> 
 		<br/>
-		<h:commandButton id="btn1" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata normale" />
-		<h:commandButton id="btn2" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata Ajax" >
+		<h:commandButton id="btn1" action="#{example1Bean.insertBook()}" value="Aggiungi con Chiamata normale" />
+		<h:commandButton id="btn2" action="#{example1Bean.insertBook()}" value="Aggiungi con Chiamata Ajax" >
 			<f:ajax execute="@form" render="@form" />
 		</h:commandButton>
-		<h:commandButton id="btn3" action="#{pageController.insertBook()}" value="Aggiungi con Chiamata Ajax selettiva" >
+		<h:commandButton id="btn3" action="#{example1Bean.insertBook()}" value="Aggiungi con Chiamata Ajax selettiva" >
 			<f:ajax execute="title pages" render="bookslist" />
 		</h:commandButton>
 		
@@ -44,7 +44,7 @@
 		<br/>
 		<h:commandLink action="index.html" value="Go to Home page with Navigation case" />
 		<br/>
-		<h:commandLink action="#{pageController.goToPage()}" value="Go to Home page" />
+		<h:commandLink action="#{example1Bean.goToPage()}" value="Go to Home page" />
 		<br/>
 		
 	</h:form>

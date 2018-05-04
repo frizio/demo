@@ -21,12 +21,16 @@ public class UserData implements Serializable {
 	@PostConstruct
 	public void init() {
 		this.setBooks(new ArrayList<>());
+		
+		this.books.add(new Book(0, "Ice 9", 1000));
+		this.books.add(new Book(1, "The 3", 500));
+		this.books.add(new Book(2, "A xxx", 700));
 	}
 
+	
 	public List<Book> getBooks() {
 		return books;
 	}
-
 	public void setBooks(List<Book> books) {
 		this.books = books;
 	}

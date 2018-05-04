@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Esempio 2</title>
+</h:head>
+
+<body>
+	<h1>Esempio 2</h1>
+	<h2>Utilizzo converter RESPONSE</h2>
+
+	<h:form id="myForm">
+
+		<h:panelGrid id="result">	
+			<h:outputLabel value="Data String" />
+			<h:outputText value="#{example2Bean.data}" />
+			
+			<h:outputLabel value="Item String" />
+			<h:outputText value="#{example2Bean.item}" />
+	
+			<h:outputLabel value="Book" />
+			<h:outputText value="#{example2Bean.book.title}" />
+		</h:panelGrid>
+		
+
+	</h:form>
+
+	<h:messages />
+
+</body>
+
+</html>

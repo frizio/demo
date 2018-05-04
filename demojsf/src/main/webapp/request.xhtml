@@ -25,27 +25,8 @@
 			
 		<h:commandButton value="Submit" action="response" />
 	
-	
-		<h:panelGrid columns="1">
-		
-			<h:selectOneMenu value = "#{pageBean.data}"> 
-			   	<f:selectItem itemValue="1" itemLabel="Item 1" /> 
-			   	<f:selectItem itemValue="2" itemLabel="Item 2" /> 
-			   	<f:selectItem itemValue="3" itemLabel="Item 3" />
-			   	<f:selectItem itemValue="4" itemLabel="Item 4" />
-			</h:selectOneMenu>
-			
-			<h:selectOneMenu value = "#{pageBean.data}"> 
-				<f:selectItems value="#{pageBean.availableItems.entrySet()}" var="entry"
-						 	   itemValue="#{entry.key}" itemLabel="#{entry.value}" />
-			</h:selectOneMenu>
-		
-		</h:panelGrid>
-		
 	</h:form>
 	
-	
-
 </body> 
 
 </html>

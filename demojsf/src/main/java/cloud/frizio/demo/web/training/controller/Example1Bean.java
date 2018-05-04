@@ -11,7 +11,7 @@ import cloud.frizio.demo.web.training.model.Book;
 
 @RequestScoped
 @Named
-public class PageController implements Serializable {
+public class Example1Bean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 

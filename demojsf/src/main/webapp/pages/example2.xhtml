@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<title>Esempio 2</title>
+</h:head>
+
+<body>
+	<h1>Esempio 2</h1>
+	<h2>Utilizzo converter</h2>
+
+	<h:form id="myForm">
+
+		<h:panelGrid columns="1">
+ 
+			<h:selectOneMenu value="#{example2Bean.data}">
+				<f:selectItem itemValue="1" itemLabel="Item 1" />
+				<f:selectItem itemValue="2" itemLabel="Item 2" />
+				<f:selectItem itemValue="3" itemLabel="Item 3" />
+				<f:selectItem itemValue="4" itemLabel="Item 4" />
+			</h:selectOneMenu>
+			 
+
+			<h:selectOneMenu value="#{example2Bean.item}">
+				<f:selectItems value="#{example2Bean.availableItems.entrySet()}" var="entry" 
+									itemValue="#{entry.key}" itemLabel="#{entry.value}" />
+			</h:selectOneMenu>
+
+			<h:selectOneMenu value="#{example2Bean.book}" converter="#{bookConverter}" >
+				<f:selectItems value="#{example2Bean.availableBooks}" var="ele"
+					itemValue="#{ele}" itemLabel="#{ele.title}" />
+			</h:selectOneMenu>
+
+			<h:commandButton value="Submit" />
+
+			<h:commandButton value="Ajax submit" action="#{example2Bean.submit()}" >
+				<f:ajax execute="@form" render="@form" />
+			</h:commandButton>
+			
+		</h:panelGrid>
+
+		<h3>Result</h3>
+		<h:panelGrid id="result" columns="2">	
+			<h:outputLabel value="Data String" />
+			<h:outputText value="#{example2Bean.data}" />
+			
+			<h:outputLabel value="Item String" />
+			<h:outputText value="#{example2Bean.item}" />
+	
+			<h:outputLabel value="Book object" />
+			<h:outputText value="#{example2Bean.book.title}" />
+		</h:panelGrid>
+		
+	</h:form>
+
+	<h:messages />
+
+</body>
+
+</html>
