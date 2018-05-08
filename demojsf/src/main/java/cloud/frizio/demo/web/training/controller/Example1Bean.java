@@ -1,6 +1,7 @@
 package cloud.frizio.demo.web.training.controller;
 
 import java.io.Serializable;
+import java.util.logging.Logger;
 
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
@@ -14,6 +15,8 @@ import cloud.frizio.demo.web.training.model.Book;
 public class Example1Bean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
+	
+	private Logger LOGGER = Logger.getLogger(Example1Bean.class.getName());
 
 	@Inject
 	private UserData userData;
@@ -23,16 +26,20 @@ public class Example1Bean implements Serializable {
 	
 
 	public String getTitle() {
+		LOGGER.info("Chiamato metodo getTitle");
 		return title;
 	}
 	public void setTitle(String title) {
+		LOGGER.info("Chiamato metodo setTitle");
 		this.title = title;
 	}
 	
 	public int getPages() {
+		LOGGER.info("Chiamato metodo getPages");
 		return pages;
 	}
 	public void setPages(int pages) {
+		LOGGER.info("Chiamato metodo setPages");
 		this.pages = pages;
 	}
 	
