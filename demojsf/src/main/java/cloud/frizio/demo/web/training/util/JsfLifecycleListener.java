@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.listener;
+package cloud.frizio.demo.web.training.util;
 
 import java.util.logging.Logger;
 
@@ -6,11 +6,11 @@ import javax.faces.event.PhaseEvent;
 import javax.faces.event.PhaseId;
 import javax.faces.event.PhaseListener;
 
-public class LifeCycleListener implements PhaseListener {
+public class JsfLifecycleListener implements PhaseListener {
 
 	private static final long serialVersionUID = 1L;
 	
-	private Logger LOGGER = Logger.getLogger(LifeCycleListener.class.getName());
+	private Logger LOGGER = Logger.getLogger(JsfLifecycleListener.class.getName());
 	
 	
 	@Override
