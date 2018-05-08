@@ -1,4 +1,4 @@
-package cloud.frizio.web.training.controller;
+package cloud.frizio.web.training.demoprimefaces.controller;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
