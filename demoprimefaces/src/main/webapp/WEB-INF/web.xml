@@ -19,9 +19,11 @@
 		<location>/public/error.xhtml</location>
 	</error-page>
 
+	<!-- 
 	<context-param>
 		<param-name>primefaces.THEME</param-name>
 		<param-value>bootstrap</param-value>
 	</context-param>
+	 -->
 	
 </web-app>
