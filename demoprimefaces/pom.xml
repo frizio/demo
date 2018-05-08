@@ -27,7 +27,8 @@
 
 		<dependency>
 			<groupId>org.primefaces.themes</groupId>
-			<artifactId>afterdark</artifactId>
+			<!--artifactId>bootstrap</artifactId-->
+			<artifactId>all-themes</artifactId>
 			<version>1.0.10</version>
 		</dependency>
 

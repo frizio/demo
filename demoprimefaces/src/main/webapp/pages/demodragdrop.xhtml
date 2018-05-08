@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>DragDrop Demo</title>
+</h:head>
+
+<body>
+
+	<h2>DragDrop Demo</h2>
+	<h4>Draggable Component</h4>
+	
+	<p:panel id="pnl" header="Draggable Panel" style="width:200px; height:100px;">
+	    <h:outputText value="I am actually a regular p:panel." />
+	</p:panel>
+	<p:draggable for="pnl" />
+	
+	<p:fieldset id="fs" legend="Fieldset" style="margin-top:20px">
+		<h:panelGrid columns="2" cellpadding="5">
+			<h:outputText value="Text1" /> <p:button value="Button1" icon="ui-icon-star"/>
+			<h:outputText value="Text2" /> <p:button value="Button2" icon="ui-icon-star"/>
+		</h:panelGrid>
+	</p:fieldset>
+	<p:draggable for="fs" />
+
+</body>
+
+</html>
