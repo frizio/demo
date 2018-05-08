@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.converter;
+package cloud.frizio.web.training.demojsf.converter;
 
 import java.util.logging.Logger;
 
@@ -9,8 +9,8 @@ import javax.faces.convert.Converter;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import cloud.frizio.demo.web.training.dao.UserData;
-import cloud.frizio.demo.web.training.model.Book;
+import cloud.frizio.web.training.demojsf.dao.UserData;
+import cloud.frizio.web.training.demojsf.model.Book;
 
 @RequestScoped
 @Named

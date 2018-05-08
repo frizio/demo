@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.dao;
+package cloud.frizio.web.training.demojsf.dao;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Named;
 
-import cloud.frizio.demo.web.training.model.Book;
+import cloud.frizio.web.training.demojsf.model.Book;
 
 @SessionScoped
 @Named

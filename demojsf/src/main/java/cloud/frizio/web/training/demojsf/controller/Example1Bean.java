@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.controller;
+package cloud.frizio.web.training.demojsf.controller;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
@@ -7,8 +7,8 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import cloud.frizio.demo.web.training.dao.UserData;
-import cloud.frizio.demo.web.training.model.Book;
+import cloud.frizio.web.training.demojsf.dao.UserData;
+import cloud.frizio.web.training.demojsf.model.Book;
 
 @RequestScoped
 @Named

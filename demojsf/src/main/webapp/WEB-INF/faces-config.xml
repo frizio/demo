@@ -8,7 +8,7 @@
 	<application />
 	
 	<lifecycle>
-	    <phase-listener>cloud.frizio.demo.web.training.util.JsfLifecycleListener</phase-listener>
+	    <phase-listener>cloud.frizio.web.training.demojsf.util.JsfLifecycleListener</phase-listener>
 	</lifecycle>
 	
 </faces-config>

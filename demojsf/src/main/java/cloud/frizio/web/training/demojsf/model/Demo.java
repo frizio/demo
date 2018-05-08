@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.model;
+package cloud.frizio.web.training.demojsf.model;
 
 import java.util.ArrayList;
 import java.util.Arrays;

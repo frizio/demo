@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.model;
+package cloud.frizio.web.training.demojsf.model;
 
 import java.io.Serializable;
 import java.util.logging.Logger;

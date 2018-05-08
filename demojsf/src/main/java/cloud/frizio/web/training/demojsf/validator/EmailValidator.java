@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.validator;
+package cloud.frizio.web.training.demojsf.validator;
 
 import java.util.logging.Logger;
 import java.util.regex.Matcher;

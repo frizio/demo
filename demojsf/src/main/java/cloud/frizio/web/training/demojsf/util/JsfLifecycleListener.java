@@ -1,4 +1,4 @@
-package cloud.frizio.demo.web.training.util;
+package cloud.frizio.web.training.demojsf.util;
 
 import java.util.logging.Logger;
 
