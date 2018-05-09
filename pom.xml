@@ -104,6 +104,7 @@
 		<module>demopicketlink-parent</module>
 		<module>demoprimefaces</module>
 		<module>demojsf</module>
+		<module>demojpa</module>
 	</modules>
 
 </project>

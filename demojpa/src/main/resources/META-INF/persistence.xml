@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persistence version="2.1"
+   			 xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+   			 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  			 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+        						 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+        						 
+	<persistence-unit name="demojpaPU" transaction-type="JTA">
+
+		<jta-data-source>java:jboss/datasources/demojpa</jta-data-source>
+		
+		<exclude-unlisted-classes>false</exclude-unlisted-classes>
+	     
+	    <properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
+			<property name="hibernate.show_sql" value="true" />
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+			
+			<property name="hibernate.c3p0.min_size" value="5" />
+		    <property name="hibernate.c3p0.max_size" value="20" />
+		    <property name="hibernate.c3p0.timeout" value="864000" />
+		    <property name="hibernate.c3p0.max_statements" value="50" />
+		    <property name="hibernate.c3p0.idle_test_period" value="3000" />
+		</properties>
+		  
+	</persistence-unit>
+    
+</persistence>
