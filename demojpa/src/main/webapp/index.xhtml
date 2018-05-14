@@ -14,9 +14,52 @@
 	<h2>Demo Java Persistence API</h2>
 
 	<h:form>
-		<p:commandButton value="Submit" icon="ui-icon-check" 
-						 ajax="false" action="#{userController.create()}" />
+	
+		<h:outputLabel for="name" value="Name" />
+		<p:inputText id="name" value="#{userData.name}" />
+		<h:outputLabel for="email" value="Email" />
+		<p:inputText id="email" value="#{userData.email}" />
+		
+	
+		<p:commandButton value="Creating" icon="ui-icon-check">
+			<f:ajax execute="name email" listener="#{userController.creating()}" render="userslist" />
+		</p:commandButton>
+		
 	</h:form>
+
+	<h:form>
+	
+		<h:outputLabel for="uid" value="ID" />
+		<p:inputText id="uid" value="#{userData.id}" />
+		
+		<p:commandButton value="Reading" icon="ui-icon-check">
+			<f:ajax execute="uid" render="sel" />
+		</p:commandButton>
+								 
+		<p:commandButton value="Updating" icon="ui-icon-check">
+			<f:ajax execute="uid" listener="#{userController.updating()}" render="userslist" />
+		</p:commandButton>
+		
+		<p:commandButton value="Deleting" icon="ui-icon-check">
+			<f:ajax execute="uid" listener="#{userController.deleting()}" render="userslist" />
+		</p:commandButton>
+		
+		
+		<h4>Utente selezionato</h4>
+		<h:outputLabel id="sel" value="#{userController.reading().getName()} -> #{userController.reading()}" />
+				
+	</h:form>
+	
+	<h2>Lista utenti</h2>
+	<h:panelGroup id="userslist">
+		<ul>
+			<ui:repeat var="user" value="#{userController.readingAll()}">
+				<li>#{user.id} #{user.name} #{user.email}</li>
+			</ui:repeat>
+		</ul>
+	</h:panelGroup>
+
+	
 </body> 
 
 </html>

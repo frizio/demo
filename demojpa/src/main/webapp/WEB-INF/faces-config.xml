@@ -7,5 +7,10 @@
 	
 	<application />
 
+	<!-- 
+	<lifecycle>
+	    <phase-listener>cloud.frizio.web.training.demojpa.util.JsfLifecycleListener</phase-listener>
+	</lifecycle>
+	 -->
 	
 </faces-config>

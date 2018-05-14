@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Demo JPA</title>
+</h:head> 
+
+<body> 
+
+	<h2>Demo Java Persistence API</h2>
+
+	<h:form>
+		<p:commandButton value="Creating" icon="ui-icon-check" 
+						 ajax="false" action="#{userController.creating()}" />
+		
+		<p:commandButton value="Reading" icon="ui-icon-check" 
+						 ajax="false" action="#{userController.reading()}" />
+		
+		<p:commandButton value="Reading all" icon="ui-icon-check" 
+						 ajax="false" action="#{userController.readingAll()}" />
+						 
+		<p:commandButton value="Updating" icon="ui-icon-check" 
+						 ajax="false" action="#{userController.updating()}" />
+						 
+		<p:commandButton value="Deleting" icon="ui-icon-check" 
+						 ajax="false" action="#{userController.deleting()}" />
+
+		<h:panelGroup id="User list">
+			<ul>
+				<ui:repeat var="user" value="#{userController.readingAll()}">
+					<li>#{user.name} #{user.email}</li>
+				</ui:repeat>
+			</ul>
+		</h:panelGroup>
+		
+	</h:form>
+	
+</body> 
+
+</html>
