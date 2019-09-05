@@ -50,6 +50,12 @@
 		<version.info.reports.plugin>2.9</version.info.reports.plugin>
 		<version.war.plugin>2.6</version.war.plugin>
 		<version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
+
+		<wildfly-hostname>localhost</wildfly-hostname>
+		<wildfly-port>9990</wildfly-port>
+		<wildfly-username>admin</wildfly-username>
+		<wildfly-password>password1;</wildfly-password>
+
 	</properties>
 
 	<dependencies>
