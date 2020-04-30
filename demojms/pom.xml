@@ -2,27 +2,42 @@
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
-
+  
   <parent>
     <groupId>cloud.frizio.web.training</groupId>
     <artifactId>demo</artifactId>
     <version>1.0.0</version>
   </parent>
+  
   <artifactId>demojms</artifactId>
-
+  <version>1.1.0</version>
   <packaging>war</packaging>
 
-  <name>Demo messaging with JMS</name>
+  <name>Demo JMS</name>
+  <description>Demo messaging with JMS</description>
 
   <dependencies>
+    
+    <!--
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>4.0.1</version>
+      <scope>provided</scope>
     </dependency>
+    
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    -->
+
   </dependencies>
+  
   <build>
-    <finalName>demojms</finalName>
+    <finalName>${project.artifactId}-${project.version}</finalName>
   </build>
+
 </project>
