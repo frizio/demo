@@ -1,116 +1,116 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-	<groupId>cloud.frizio.web.training</groupId>
-	<artifactId>demo</artifactId>
-	<version>1.0.0</version>
-	
-	<packaging>pom</packaging>
+  <groupId>cloud.frizio.web.training</groupId>
+  <artifactId>demo</artifactId>
+  <version>1.0.0</version>
+  
+  <packaging>pom</packaging>
 
-	<name>Demo</name>
-	<description>Demo project to test Java EE implementation</description>
+  <name>Demo</name>
+  <description>Demo project to test Java EE implementation</description>
 
-	<url>http://www.hello.frizio.cloud</url>
+  <url>http://www.hello.frizio.cloud</url>
 
-	<licenses>
-		<license>
-			<name>Apache License, Version 2.0</name>
-			<distribution>repo</distribution>
-			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
-		</license>
-	</licenses>
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <distribution>repo</distribution>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+    </license>
+  </licenses>
 
-	<organization>
-		<name>Frizio</name>
-		<url>http://www.frizio.cloud</url>
-	</organization>
+  <organization>
+    <name>Frizio</name>
+    <url>http://www.frizio.cloud</url>
+  </organization>
 
-	<developers>
-		<developer>
-			<id>maurizio</id>
-			<name>Maurizio La Rocca</name>
-			<email>mrz.larocca@gmail.com</email>
-			<url>http://it.linkedin.com/pub/maurizio-la-rocca/56/128/6a6/</url>
-			<organization>Frizio</organization>
-			<organizationUrl>http://www.frizio.cloud</organizationUrl>
-			<roles>
-				<role>developer</role>
-			</roles>
-			<timezone>-2</timezone>
-		</developer>
-	</developers>
+  <developers>
+    <developer>
+      <id>maurizio</id>
+      <name>Maurizio La Rocca</name>
+      <email>mrz.larocca@gmail.com</email>
+      <url>http://it.linkedin.com/pub/maurizio-la-rocca/56/128/6a6/</url>
+      <organization>Frizio</organization>
+      <organizationUrl>http://www.frizio.cloud</organizationUrl>
+      <roles>
+        <role>developer</role>
+      </roles>
+      <timezone>-2</timezone>
+    </developer>
+  </developers>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
-		
-		<version.info.reports.plugin>2.9</version.info.reports.plugin>
-		<version.war.plugin>2.6</version.war.plugin>
-		<version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    
+    <version.info.reports.plugin>2.9</version.info.reports.plugin>
+    <version.war.plugin>2.6</version.war.plugin>
+    <version.wildfly.maven.plugin>1.0.2.Final</version.wildfly.maven.plugin>
 
-		<wildfly-hostname>localhost</wildfly-hostname>
-		<wildfly-port>9990</wildfly-port>
-		<wildfly-username>admin</wildfly-username>
-		<wildfly-password>password1;</wildfly-password>
+    <wildfly-hostname>localhost</wildfly-hostname>
+    <wildfly-port>9990</wildfly-port>
+    <wildfly-username>admin</wildfly-username>
+    <wildfly-password>password1;</wildfly-password>
 
-	</properties>
+  </properties>
 
-	<dependencies>
+  <dependencies>
 
-		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>7.0</version>
-			<scope>provided</scope>
-		</dependency>
+    <dependency>
+      <groupId>javax</groupId>
+      <artifactId>javaee-api</artifactId>
+      <version>8.0.1</version>
+      <scope>provided</scope>
+    </dependency>
 
-	</dependencies>
+  </dependencies>
 
-	<build>
-		<finalName>${project.artifactId}</finalName>
-		<plugins>
+  <build>
+    <plugins>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>${version.info.reports.plugin}</version>
-			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-project-info-reports-plugin</artifactId>
+        <version>${version.info.reports.plugin}</version>
+      </plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${version.war.plugin}</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
-			</plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>${version.war.plugin}</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
 
-			<plugin>
-				<groupId>org.wildfly.plugins</groupId>
-				<artifactId>wildfly-maven-plugin</artifactId>
-				<version>${version.wildfly.maven.plugin}</version>
-				<configuration>
-					<path>/${project.artifactId}</path>
-					<hostname>${wildfly-hostname}</hostname>
+      <plugin>
+        <groupId>org.wildfly.plugins</groupId>
+        <artifactId>wildfly-maven-plugin</artifactId>
+        <version>${version.wildfly.maven.plugin}</version>
+        <configuration>
+          <path>/${project.artifactId}</path>
+          <hostname>${wildfly-hostname}</hostname>
                     <port>${wildfly-port}</port>
                     <username>${wildfly-username}</username>
                     <password>${wildfly-password}</password> 					 
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+        </configuration>
+      </plugin>
+      
+    </plugins>
+  </build>
 
-	<modules>
-		<module>demoservlet</module>
-		<module>demolog4j</module>
-		<module>demowebsocket</module>
-		<module>demopicketlink-parent</module>
-		<module>demoprimefaces</module>
-		<module>demojsf</module>
-		<module>demojpa</module>
-	  <module>demojms</module>
+  <modules>
+    <module>demoservlet</module>
+    <module>demolog4j</module>
+    <module>demowebsocket</module>
+    <module>demopicketlink-parent</module>
+    <module>demoprimefaces</module>
+    <module>demojsf</module>
+    <module>demojpa</module>
+    <module>demojms</module>
   </modules>
 
 </project>
