@@ -14,6 +14,11 @@
     <form action="send" method="get">
       <textarea rows="2" cols="40" id="msg" name="msg"></textarea>
       <br/>
+      <input type="radio" name="type" value="queue" checked="checked"> Queue<br/>
+      <input type="radio" name="type" value="topic1"> Topic 1<br/>
+      <input type="radio" name="type" value="topic2"> Topic 2<br/>
+
+      
       <button type="submit">SEND</button>
     </form>
     
@@ -25,6 +30,7 @@
     <h2>Tutorial from <a href="https://www.javaboss.it/">JavaBoss</a></h2>
     <ul>
       <li><a href="https://www.javaboss.it/code-jms-parte-1/">Code JMS - Parte 1</a></li>
+      <li><a href="https://www.javaboss.it/code-jms-parte-2/">Code JMS - Parte 2</a></li>
     </ul>
 
   </body>
