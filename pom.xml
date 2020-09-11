@@ -111,6 +111,7 @@
     <module>demojsf</module>
     <module>demojpa</module>
     <module>demojms</module>
+    <module>demo-spring-mvc</module>
   </modules>
 
 </project>
