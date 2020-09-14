@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Demo Spring MVC</title>
+  <title>Demo form</title>
 </head>
 <body>
-  <h2>Demo Spring MVC - Home Page</h2>
-  <hr>
-  <a href="showForm">Reading HTML Form Data Demo</a>
+  <h2>First form: processing</h2>
+    <h2>Hello dear ${param.studentName}!!!</h2>
 </body>
 </html>
