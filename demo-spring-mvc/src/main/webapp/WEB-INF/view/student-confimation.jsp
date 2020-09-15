@@ -9,6 +9,6 @@
 </head>
 <body>
   <h2>Student Confirmation Page</h2>
-  <h4>The student is confirmed: ${student.firstName} ${student.lastName}</h4>
+  <h4>The student from ${student.country} is confirmed: ${student.firstName} ${student.lastName}</h4>
 </body>
 </html>
