@@ -7,6 +7,7 @@
 </head>
 <body>
   <h2>First form: processing</h2>
-    <h2>Hello dear ${param.studentName}!!!</h2>
+  <h4>Hello dear ${param.studentName}!!!</h4>
+  <h4>The message: ${message}</h4>
 </body>
 </html>
