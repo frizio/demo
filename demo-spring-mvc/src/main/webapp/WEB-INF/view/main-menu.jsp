@@ -10,5 +10,8 @@
   <h2>Demo Spring MVC - Home Page</h2>
   <hr>
   <a href="first/showForm">Reading HTML Form Data Demo</a>
+  <hr>
+  <a href="student/showForm">Student Registration Page</a>
+  <br>
 </body>
 </html>
