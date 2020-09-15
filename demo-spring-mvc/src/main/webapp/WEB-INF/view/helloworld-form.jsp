@@ -7,7 +7,7 @@
 </head>
 <body>
   <h2>First form</h2>
-  <form action="processFormV2" method="GET">
+  <form action="processFormV3" method="GET">
     <input type="text" name="studentName" placeholder="Insert your name" />
     <input type="submit"/>
   </form>

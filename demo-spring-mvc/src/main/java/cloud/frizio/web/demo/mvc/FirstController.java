@@ -5,6 +5,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class FirstController {
@@ -23,6 +24,13 @@ public class FirstController {
   public String processFormAndConvert(HttpServletRequest request, Model model) {
     String theName = request.getParameter("studentName");
     String result = "Yo! " + theName.toUpperCase();
+    model.addAttribute("message", result);
+    return "helloworld";
+  }
+
+  @RequestMapping("/processFormV3")
+  public String processFormAndConvertWith(@RequestParam("studentName") String theName, Model model) {
+    String result = "Hey my friend " + theName.toUpperCase();
     model.addAttribute("message", result);
     return "helloworld";
   }
