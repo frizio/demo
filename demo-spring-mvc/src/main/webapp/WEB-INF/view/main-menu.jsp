@@ -9,6 +9,6 @@
 <body>
   <h2>Demo Spring MVC - Home Page</h2>
   <hr>
-  <a href="showForm">Reading HTML Form Data Demo</a>
+  <a href="first/showForm">Reading HTML Form Data Demo</a>
 </body>
 </html>
