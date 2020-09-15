@@ -1,4 +1,4 @@
-package cloud.frizio.web.demo.mvc;
+package cloud.frizio.web.demo.mvc.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
