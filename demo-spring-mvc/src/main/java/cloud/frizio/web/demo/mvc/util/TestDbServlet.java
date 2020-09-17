@@ -21,7 +21,7 @@ public class TestDbServlet extends HttpServlet {
 
     String user = "wildfly_user";
     String password = "password1;";
-    String url  = "jdbc:mysql://db:3306/test?useSSL=false&serverTimezone=UTC";
+    String url  = "jdbc:mysql://db:3306/test?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 
     String driver = "com.mysql.cj.jdbc.Driver";
 
