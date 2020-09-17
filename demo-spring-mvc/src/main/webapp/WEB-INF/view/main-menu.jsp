@@ -12,6 +12,8 @@
   <a href="first/showForm">Reading HTML Form Data Demo</a>
   <hr>
   <a href="student/showForm">Student Registration Page</a>
+  <hr>
+  <a href="customer/list">Customer List - Integration Spring MVC - Hibernate</a>
   <br>
 </body>
 </html>

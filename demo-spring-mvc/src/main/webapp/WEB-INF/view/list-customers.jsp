@@ -8,15 +8,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demo Spring MVC + Hibernate Integration</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/style.css" />
   </head>
 
   <body>
     <div id="wrapper">
-      </div id="header">
-        <h4>CRM - Customer Relationship Management</h4>
+      <div id="header">
+        <h2>CRM - Customer Relationship Manager</h2>
       </div>
-      <div id="container">
-        <p>${customers}</p>
+    </div>
+    <div id="container">
+      <div id="content">
         <table>
           <tr>
             <th>First Name</th>
@@ -31,7 +33,9 @@
             </tr>
           </c:forEach>
         </table>
+        <p>${customers}</p>
       </div>
+    </div>
   </body>
 
 </html>
