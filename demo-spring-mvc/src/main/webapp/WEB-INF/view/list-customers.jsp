@@ -9,6 +9,6 @@
 <body>
   <h2>Demo Spring MVC + Hibernate Integration</h2>
   <hr>
-  <p>List costumers - Coming soon...</p>
+  <p>List customers - Coming soon...</p>
 </body>
 </html>

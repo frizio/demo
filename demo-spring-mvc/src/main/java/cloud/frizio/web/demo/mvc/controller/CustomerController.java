@@ -5,13 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/costumer")
-public class CostumerController {
+@RequestMapping("/customer")
+public class CustomerController {
   
   @RequestMapping("/list")
-  public String listCostumers(Model theModel) {
+  public String listCustomers(Model theModel) {
 
-    return "list-costumers";
+    return "list-customers";
   }
 
 }
