@@ -17,6 +17,20 @@
       </div>
       <div id="container">
         <p>${customers}</p>
+        <table>
+          <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+          </tr>
+          <c:forEach var="customer" items="${customers}">
+            <tr>
+              <td>${customer.firstName}</td>
+              <td>${customer.lastName}</td>
+              <td>${customer.email}</td>
+            </tr>
+          </c:forEach>
+        </table>
       </div>
   </body>
 
