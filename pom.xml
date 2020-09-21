@@ -112,6 +112,7 @@
     <module>demojpa</module>
     <module>demojms</module>
     <module>demo-spring-mvc</module>
+    <module>demo-spring-mvc-security</module>
   </modules>
 
 </project>
