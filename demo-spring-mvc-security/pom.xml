@@ -8,7 +8,7 @@
     <artifactId>demo</artifactId>
     <version>1.0.0</version>
   </parent>
-  <artifactId>demo-spring-mvc</artifactId>
+  <artifactId>demo-spring-mvc-security</artifactId>
 
   <packaging>war</packaging>
 
