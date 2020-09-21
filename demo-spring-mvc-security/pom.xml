@@ -16,6 +16,7 @@
 
   <properties>
     <version.spring.framework>5.2.8.RELEASE</version.spring.framework>
+    <version.spring.security>5.2.6.RELEASE</version.spring.security>
   </properties>
 
   <dependencies>
@@ -24,6 +25,18 @@
       <artifactId>spring-webmvc</artifactId>
       <version>${version.spring.framework}</version>
     </dependency>
+  
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${version.spring.security}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${version.spring.security}</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
