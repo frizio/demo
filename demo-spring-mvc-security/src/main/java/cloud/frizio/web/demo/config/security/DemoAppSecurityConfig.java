@@ -32,17 +32,17 @@ public class DemoAppSecurityConfig extends WebSecurityConfigurerAdapter {
         .antMatchers("/").hasRole("EMPLOYEE")
         .antMatchers("/leaders/**").hasRole("MANAGER")
         .antMatchers("/systems/**").hasRole("ADMIN")
-      .and()
-        .formLogin()
+      .and().formLogin()
           .loginPage("/fancyLogin")
           .loginProcessingUrl("/authenticateTheUser")
           .permitAll()
-      .and()
-        .logout()
-        .permitAll()
-      .and()
-        .exceptionHandling().accessDeniedPage("/accessDenied");
+      .and().logout()
+          .permitAll()
+      .and().exceptionHandling()
+          .accessDeniedPage("/accessDenied");
       
+    // http.exceptionHandling().accessDeniedPage("/accessDenied");
+
   }
 
 }
