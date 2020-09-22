@@ -20,7 +20,7 @@ public class DemoAppSecurityConfig extends WebSecurityConfigurerAdapter {
     org.springframework.security.core.userdetails.User.UserBuilder users = User.withDefaultPasswordEncoder();
     
     auth.inMemoryAuthentication()
-      .withUser(users.username("al").password("test123").roles("EMPLOYEE"))
+      .withUser(users.username("al").password("test123").roles("EMPLOYEE", "MANAGER"))
       .withUser(users.username("bob").password("test123").roles("MANAGER"))
       .withUser(users.username("admin").password("test123").roles("ADMIN"));
 
@@ -32,7 +32,7 @@ public class DemoAppSecurityConfig extends WebSecurityConfigurerAdapter {
         .anyRequest().authenticated()
       .and()
         .formLogin()
-          .loginPage("/customLogin")
+          .loginPage("/fancyLogin")
           .loginProcessingUrl("/authenticateTheUser")
           .permitAll()
       .and()
