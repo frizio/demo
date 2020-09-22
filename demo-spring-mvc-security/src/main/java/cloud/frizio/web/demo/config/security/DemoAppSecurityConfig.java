@@ -34,7 +34,10 @@ public class DemoAppSecurityConfig extends WebSecurityConfigurerAdapter {
         .formLogin()
           .loginPage("/fancyLogin")
           .loginProcessingUrl("/authenticateTheUser")
-          .permitAll();
+          .permitAll()
+      .and()
+        .logout()
+        .permitAll();
       
   }
 
