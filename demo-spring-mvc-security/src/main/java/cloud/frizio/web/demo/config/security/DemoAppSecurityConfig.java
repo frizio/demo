@@ -32,7 +32,7 @@ public class DemoAppSecurityConfig extends WebSecurityConfigurerAdapter {
         .anyRequest().authenticated()
       .and()
         .formLogin()
-          .loginPage("/fancyLogin")
+          .loginPage("/customLogin")
           .loginProcessingUrl("/authenticateTheUser")
           .permitAll()
       .and()
