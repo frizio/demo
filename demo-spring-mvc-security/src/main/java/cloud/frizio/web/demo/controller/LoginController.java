@@ -11,4 +11,9 @@ public class LoginController {
     return "custom-login";
   }
 
+  @GetMapping("/fancyLogin")
+  public String fancyLogin() {
+    return "fancy-login";
+  }
+
 }
